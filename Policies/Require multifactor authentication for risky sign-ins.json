@@ -1,0 +1,73 @@
+{
+    "conditions": {
+        "userRiskLevels": [],
+        "signInRiskLevels": [
+            "high",
+            "medium"
+        ],
+        "clientAppTypes": [
+            "all"
+        ],
+        "servicePrincipalRiskLevels": [],
+        "insiderRiskLevels": null,
+        "clients": null,
+        "platforms": null,
+        "locations": null,
+        "times": null,
+        "deviceStates": null,
+        "devices": null,
+        "clientApplications": null,
+        "authenticationFlows": null,
+        "applications": {
+            "includeApplications": [
+                "All"
+            ],
+            "excludeApplications": [],
+            "includeUserActions": [],
+            "includeAuthenticationContextClassReferences": [],
+            "applicationFilter": null,
+            "networkAccess": null,
+            "globalSecureAccess": null
+        },
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeUsers": [],
+            "includeGroups": [],
+            "excludeGroups": [],
+            "includeRoles": [],
+            "excludeRoles": [],
+            "includeGuestsOrExternalUsers": null,
+            "excludeGuestsOrExternalUsers": null
+        }
+    },
+    "grantControls": {
+        "operator": "OR",
+        "builtInControls": [
+            "mfa"
+        ],
+        "customAuthenticationFactors": [],
+        "termsOfUse": [],
+        "authenticationStrength@odata.context": "https://graph.microsoft.com/beta/$metadata#conditionalAccess/templates('6b619f55-792e-45dc-9711-d83ec9d7ae90')/details/grantControls/authenticationStrength/$entity",
+        "authenticationStrength": null
+    },
+    "sessionControls": {
+        "disableResilienceDefaults": null,
+        "applicationEnforcedRestrictions": null,
+        "cloudAppSecurity": null,
+        "persistentBrowser": null,
+        "continuousAccessEvaluation": null,
+        "secureSignInSession": null,
+        "networkAccessSecurity": null,
+        "globalSecureAccessFilteringProfile": null,
+        "signInFrequency": {
+            "value": null,
+            "type": null,
+            "authenticationType": "primaryAndSecondaryAuthentication",
+            "frequencyInterval": "everyTime",
+            "isEnabled": true
+        }
+    },
+    "displayName": "Require multifactor authentication for risky sign-ins"
+}

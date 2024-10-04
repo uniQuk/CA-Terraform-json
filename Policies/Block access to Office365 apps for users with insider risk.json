@@ -1,0 +1,57 @@
+{
+    "sessionControls": null,
+    "conditions": {
+        "userRiskLevels": [],
+        "signInRiskLevels": [],
+        "clientAppTypes": [
+            "all"
+        ],
+        "servicePrincipalRiskLevels": [],
+        "insiderRiskLevels": "elevated",
+        "clients": null,
+        "platforms": null,
+        "locations": null,
+        "times": null,
+        "deviceStates": null,
+        "devices": null,
+        "clientApplications": null,
+        "authenticationFlows": null,
+        "applications": {
+            "includeApplications": [
+                "Office365"
+            ],
+            "excludeApplications": [],
+            "includeUserActions": [],
+            "includeAuthenticationContextClassReferences": [],
+            "applicationFilter": null,
+            "networkAccess": null,
+            "globalSecureAccess": null
+        },
+        "users": {
+            "includeUsers": [
+                "All"
+            ],
+            "excludeUsers": [],
+            "includeGroups": [],
+            "excludeGroups": [],
+            "includeRoles": [],
+            "excludeRoles": [],
+            "includeGuestsOrExternalUsers": null,
+            "excludeGuestsOrExternalUsers": {
+                "guestOrExternalUserTypes": "b2bDirectConnectUser,otherExternalUser,serviceProvider",
+                "externalTenants": null
+            }
+        }
+    },
+    "grantControls": {
+        "operator": "OR",
+        "builtInControls": [
+            "block"
+        ],
+        "customAuthenticationFactors": [],
+        "termsOfUse": [],
+        "authenticationStrength@odata.context": "https://graph.microsoft.com/beta/$metadata#conditionalAccess/templates('16aaa400-bfdf-4756-a420-ad2245d4cde8')/details/grantControls/authenticationStrength/$entity",
+        "authenticationStrength": null
+    },
+    "displayName": "Block access to Office365 apps for users with insider risk"
+}
