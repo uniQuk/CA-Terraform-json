@@ -13,4 +13,5 @@ Assume json is stored in ./Policies and outputs to a folder ./PoliciesTF. Includ
 
 ### The python script updated to include Location and Device blocks.
 
-# Added a PowerShell script - this is a WIP. Produced valid Terraform. Not properly tested. Would reccomend the Python Script as more complete for now.
+#### Added a PowerShell script - this is a WIP. 
+Produced valid Terraform. Not properly tested. Would reccomend the Python Script as more complete for now.
