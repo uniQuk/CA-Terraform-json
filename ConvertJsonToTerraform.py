@@ -40,6 +40,14 @@ def convert_policy_to_terraform(policy, filename):
     user_risk_levels = {json.dumps(policy['conditions']['userRiskLevels'])}
 '''
 
+        if 'locations' in policy['conditions'] and policy['conditions']['locations']:
+            terraform += f'''
+    locations {{
+      included_locations = {json.dumps(policy['conditions']['locations'].get('includeLocations', []))}
+      excluded_locations = {json.dumps(policy['conditions']['locations'].get('excludeLocations', []))}
+    }}
+'''
+
         terraform += '  }\n'
 
         if policy.get('grantControls'):
