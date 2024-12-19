@@ -48,6 +48,18 @@ def convert_policy_to_terraform(policy, filename):
     }}
 '''
 
+        if 'devices' in policy['conditions'] and policy['conditions']['devices'] and \
+           policy['conditions']['devices'].get('deviceFilter'):
+            device_filter = policy['conditions']['devices']['deviceFilter']
+            terraform += f'''
+    devices {{
+      filter {{
+        mode = "{device_filter.get('mode', '').lower()}"
+        rule = "{device_filter.get('rule', '').replace('"', '\\"')}"
+      }}
+    }}
+'''
+
         terraform += '  }\n'
 
         if policy.get('grantControls'):
